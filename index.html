@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Pago</title>
+    <link rel="stylesheet" href="./assets/css/style-afiliacion.css">
+    <link rel="stylesheet" href="./assets/css/theme.min.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <main style="max-width: 900px;margin:auto">
+        <div class="container">
+            <nav class="d-flex justify-content-center pt-3">
+                <img src="./assets/img/logo-cober-ale.svg" alt="logo-cober" width="200px">
+            </nav>
+            <h1 class="mb-5">PLATAFORMA DE PAGO</h1>
+            <div class="row">
+                <!-- input -->
+                <div class="mb-3 col-md-6">
+                    <label class="form-label" for="firstNameForAddress">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Ingresar nombre" id="firstNameForAddress" />
+                </div>
+                <!-- input -->
+                <div class="mb-3 col-md-6">
+                    <label class="form-label" for="lastNameForAddress">Apellido</label>
+                    <input type="text" class="form-control" placeholder="Ingresar apellido" id="lastNameForAddress" />
+                </div>
+                <!-- input -->
+                <div class="mb-3 col-md-6">
+                    <label class="form-label" for="emailForAddress">Correo</label>
+                    <input type="email" class="form-control" placeholder="Ingresar correo" id="emailForAddress" />
+                </div>
+                <!-- input -->
+                <div class="mb-3 col-md-6">
+                    <label class="form-label" for="phoneForAddress">Celular</label>
+                    <input type="text" class="form-control" placeholder="Ingresar celular" id="phoneForAddress" />
+                </div>
+                <!-- input -->
+                <div class="mb-3 col-6">
+                    <label class="form-label" for="addressForAddress">Dirección</label>
+                    <input type="text" class="form-control" placeholder="Ingresar dirección" id="addressForAddress" />
+                </div>
+                <!-- input -->
+                <div class="mb-3 col-6">
+                    <label class="form-label" for="townForAddress">Localidad</label>
+                    <input type="text" class="form-control" placeholder="Ingresar localidad" id="townForAddress" />
+                </div>
+                <!-- input -->
+                <div class="mb-3 col-6">
+                    <label class="form-label" for="stateForAddress">Partido</label>
+                    <input type="text" class="form-control" placeholder="Ingresar parttido" id="stateForAddress" />
+                </div>
+                <!-- input -->
+                <div class="mb-3 col-6">
+                    <label class="form-label" for="zipForAddress">Código Postal</label>
+                    <input type="text" class="form-control" placeholder="Ingresar código postal" id="zipForAddress" />
+                </div>
+                
+            </div>
+    
+            <!-- row -->
+            <!-- <h3 class="mb-1">Datos para el pago</h3> -->
+            <div class="row gx-3">
+                
+    
+                <div class="mb-3 col-12">
+                    <label class="form-label">Método de Pago</label>
+                    <select class="form-select" id="paymentMethod">
+                      <option selected>Seleccione Método de Pago</option>
+                      <option value="1">Tarjeta Débito</option>
+                      <option value="2">Tarjeta Crédito</option>
+                      
+                    </select>
+                  </div>
+                  
+                  <div class="card shadow-none mb-2" id="cardDetails" style="display: none;">
+                    <div class="card-body" style="padding: 5px;">
+                      <div class="d-flex mb-4">
+                        <div class="form-check" style="padding-left: 0px;">
+                          <label class="form-check-label" for="creditdebitcard"></label>
+                        </div>
+                        <div>
+                          <h5 class="mb-1 fs-4">Tarjeta de Crédito / Débito </h5>
+                          <p class="mb-0 fs-6">
+                            Puede abonar de manera segura. Tenemos soporte de Mastercard, Visa y American Express.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="mb-3">
+                            <label for="card-mask" class="form-label">Número de la tarjeta</label>
+                            <input type="text" class="form-control" id="card-mask" placeholder="xxxx-xxxx-xxxx-xxxx" required />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                          <div class="mb-3 col-12">
+                            <label class="form-label">Nombre de la tarjeta</label>
+                            <select class="form-select" id="cardName">
+                              <option selected>Seleccione nombre de la tarjeta</option>
+                              <option value="Visa">Visa</option>
+                              <option value="Mastercard">Mastercard</option>
+                              <option value="American Express">American Express</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                          <div class="mb-3 mb-lg-0">
+                            <label class="form-label" for="expirydate">Fecha de vencimiento</label>
+                            <input type="text" class="form-control" id="expirydate" placeholder="MM-YY" maxlength="5" required />
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-4 col-12">
+                          <div class="mb-3 mb-lg-0">
+                            <label for="digit-mask" class="form-label">
+                              Código CVV
+                              
+                              <i class="fe fe-help-circle ms-1" data-bs-toggle="tooltip" data-placement="top"
+                                title="A 3 - digit number, typically printed on the back of a card."></i>
+                                
+                            </label>
+                            <input type="password" class="form-control" name="digit-mask" id="digit-mask" placeholder="xxx" maxlength="3"
+                              inputmode="numeric" required />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                <div class="d-flex">
+                    <div><input class="form-check-input" type="checkbox"
+                            id="checkboxNoLabel" name="aceptoTerminoCondiciones"
+                            aria-label="..." value="true"></div>
+                    <div class="mb-3">ACEPTO los siguientes términos y
+                        condiciones</div>
+                </div>
+                <div>
+                    <p>
+                        La presente
+                        cotización no implica aceptación como socio hasta que se
+                        complete la soclicitud de ingreso y sea aprobada por el
+                        departamento comercial y auditoría médica. Sujeta a
+                        modificaciones sin previo aviso. Válida por 48 hs.
+                    </p>
+                </div>
+    
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="d-flex justify-content-center">
+            
+            <!-- Button -->
+            <a href="#" class="btn btn-primary mt-3 mb-4">Confirmar Pago</a>
+        </div>
+    </main>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paymentMethodSelect = document.getElementById("paymentMethod");
+            const cardDetailsDiv = document.getElementById("cardDetails");
+            const cardNumberInput = document.getElementById("card-mask");
+    
+            
+            paymentMethodSelect.addEventListener("change", function () {
+                
+                cardDetailsDiv.style.display = (paymentMethodSelect.value === "1" || paymentMethodSelect.value === "2") ? "block" : "none";
+            });
+    
+            
+            cardNumberInput.addEventListener("input", function () {
+                
+                let cardNumber = cardNumberInput.value.replace(/\D/g, '');
+    
+                
+                cardNumber = cardNumber.replace(/(\d{4})(?=\d)/g, '$1-');
+    
+                
+                cardNumber = cardNumber.slice(0, 19);
+    
+                
+                cardNumberInput.value = cardNumber;
+            });
+    
+            // Validación de vencimiento de fecha
+            const expiryDateInput = document.getElementById("expirydate");
+            expiryDateInput.addEventListener("input", function () {
+                
+                const inputValue = expiryDateInput.value.replace(/\D/g, '');
+                if (inputValue.length > 2) {
+                    expiryDateInput.value = inputValue.slice(0, 2) + '-' + inputValue.slice(2);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
