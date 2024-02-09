@@ -12,59 +12,26 @@
 
     <main style="max-width: 900px;margin:auto">
         <div class="container">
-            <nav class="d-flex justify-content-center pt-3">
+            <nav class="d-flex justify-content-start pt-3">
                 <img src="./assets/img/logo-cober-ale.svg" alt="logo-cober" width="200px">
             </nav>
-            <h1 class="mb-5">PLATAFORMA DE PAGO</h1>
+            <div>
+              <p>
+                  Por favor, complete el siguiente formulario para realizar el pago de su cuenta a Cober con tarjeta de crédito.
+              </p>
+            </div>
+            <hr>
+            <h3 class="mb-1">Datos para el pago</h3>
             <div class="row">
                 <!-- input -->
-                <div class="mb-3 col-md-6">
-                    <label class="form-label" for="firstNameForAddress">Nombre</label>
-                    <input type="text" class="form-control" placeholder="Ingresar nombre" id="firstNameForAddress" />
-                </div>
-                <!-- input -->
-                <div class="mb-3 col-md-6">
-                    <label class="form-label" for="lastNameForAddress">Apellido</label>
-                    <input type="text" class="form-control" placeholder="Ingresar apellido" id="lastNameForAddress" />
-                </div>
-                <!-- input -->
-                <div class="mb-3 col-md-6">
-                    <label class="form-label" for="emailForAddress">Correo</label>
-                    <input type="email" class="form-control" placeholder="Ingresar correo" id="emailForAddress" />
-                </div>
-                <!-- input -->
-                <div class="mb-3 col-md-6">
-                    <label class="form-label" for="phoneForAddress">Celular</label>
-                    <input type="text" class="form-control" placeholder="Ingresar celular" id="phoneForAddress" />
-                </div>
-                <!-- input -->
-                <div class="mb-3 col-6">
-                    <label class="form-label" for="addressForAddress">Dirección</label>
-                    <input type="text" class="form-control" placeholder="Ingresar dirección" id="addressForAddress" />
-                </div>
-                <!-- input -->
-                <div class="mb-3 col-6">
-                    <label class="form-label" for="townForAddress">Localidad</label>
-                    <input type="text" class="form-control" placeholder="Ingresar localidad" id="townForAddress" />
-                </div>
-                <!-- input -->
-                <div class="mb-3 col-6">
-                    <label class="form-label" for="stateForAddress">Partido</label>
-                    <input type="text" class="form-control" placeholder="Ingresar parttido" id="stateForAddress" />
-                </div>
-                <!-- input -->
-                <div class="mb-3 col-6">
-                    <label class="form-label" for="zipForAddress">Código Postal</label>
-                    <input type="text" class="form-control" placeholder="Ingresar código postal" id="zipForAddress" />
-                </div>
-                
+                <div class="col-md-12">
+                    <label class="form-label" for="firstNameForAddress">Nombre y Apellido (Como figura en su tarjeta)</label>
+                    <input type="text" class="form-control" placeholder="Ingresar nombre y apellido" id="firstNameForAddress" />
+                </div>               
             </div>
-    
             <!-- row -->
             <!-- <h3 class="mb-1">Datos para el pago</h3> -->
             <div class="row gx-3">
-                
-    
                 <div class="mb-3 col-12">
                     <label class="form-label">Método de Pago</label>
                     <select class="form-select" id="paymentMethod">
